@@ -1,0 +1,11 @@
+module counter1(
+input clk2, rst,
+    output reg [3:0] counterout
+    );
+    
+ always @ (posedge(clk2), posedge(rst))
+ begin
+     if (rst) counterout <= 0;
+     else counterout <= counterout + 1;
+end
+endmodule

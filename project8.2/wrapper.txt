@@ -1,0 +1,20 @@
+module wrapper(
+input clk,
+input rst,
+output [3:0] led
+    );
+    wire [27:0] Q28;
+    
+counter1 output_counter1(
+.clk2(Q28[26]),
+.rst(rst),
+.counterout(led)
+);
+
+counter2 input_counter2(
+.clk1(clk),
+.rst(rst),
+.Q28(Q28)
+);
+
+endmodule

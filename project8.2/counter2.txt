@@ -1,0 +1,11 @@
+module counter2(
+  input clk1, rst,
+    output reg [27:0] Q28
+    );
+    
+ always @ (posedge(clk1), posedge(rst))
+ begin
+     if (rst) Q28 <= 0;
+     else  Q28 <= Q28 + 1;
+end
+endmodule
